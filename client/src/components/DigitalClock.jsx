@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function DigitalClock() {
   const formatTime = () =>
@@ -19,13 +19,14 @@ export default function DigitalClock() {
 
   return (
     <div
-      className="flex items-end gap-3 leading-none"
+      key={time}
+      className="clock-time-enter flex items-end gap-3 leading-none"
       style={{ fontFamily: "'Cormorant Garamond', 'Georgia', serif" }}
     >
       <span className="text-[9rem] font-extralight text-white/90 tracking-tight tabular-nums">
         {hours}
       </span>
-      <span className="text-[9rem] font-extralight text-[#C9A84C]/50 leading-none mb-1">
+      <span className="text-[9rem] font-extralight text-[#C9A84C]/70 leading-none mb-1">
         :
       </span>
       <span className="text-[9rem] font-extralight text-white/90 tracking-tight tabular-nums">
